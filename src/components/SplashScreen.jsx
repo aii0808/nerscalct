@@ -207,13 +207,13 @@ export const SplashScreen = ({ onFinish }) => {
         <div className="text-center mb-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-[#00FF88] text-xs font-black mb-2 shadow-sm">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>SISTEM KLINIS KHUSUS S.KEP</span>
+            <span>SISTEM KLINIS </span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center justify-center gap-2 font-sans">
             Ners<span className="text-[#00FF88] drop-shadow-[0_0_12px_rgba(0,255,136,0.8)]">Calc</span>
           </h1>
           <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mt-1">
-            Asisten &amp; Kalkulator Klinis Terakreditasi
+            Asisten &amp; Kalkulator Klinis
           </p>
         </div>
 

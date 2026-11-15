@@ -79,7 +79,7 @@ export const Dashboard = () => {
                 <ShieldCheck className="w-4 h-4" style={{ color: palette.primary }} />
               </div>
               <p className="text-xs font-black" style={{ color: palette.primary }}>S.Kep</p>
-              <p className="text-[11px] text-slate-600 dark:text-slate-300 font-bold mt-0.5">{user?.unit || 'Instalasi Rawat Inap & ICU'}</p>
+              <p className="text-[11px] text-slate-600 dark:text-slate-300 font-bold mt-0.5">{user?.unit || ''}</p>
             </div>
           </div>
         </div>
@@ -283,10 +283,10 @@ export const Dashboard = () => {
       {/* Copyright Footer */}
       <div className="pt-2 pb-4 text-center text-xs text-slate-600 dark:text-slate-300 border-t border-slate-300/60 dark:border-white/10 font-bold">
         <p className="text-slate-900 dark:text-white">
-          &copy; Ari Suandi Putra &bull; NersCalc S.Kep System
+          &copy; Ari Suandi Putra &bull; NersCalc
         </p>
         <p className="text-[11px] font-medium opacity-80 mt-0.5">
-          Dedikasi untuk seluruh Sarjana Keperawatan andalan Indonesia
+          
         </p>
       </div>
 

@@ -76,7 +76,7 @@ export const Login = () => {
             Ners<span style={{ color: palette.primary }}>Calc</span>
           </h1>
           <p className="text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 mt-0.5">
-            Portal Asisten Klinis Khusus Sarjana Keperawatan (S.Kep)
+            Asisten perhitungan perawat
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export const Login = () => {
               className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-black shadow-sm ${palette.badge}`}
             >
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: palette.primary }} />
-              S.Kep Validated
+              Validated
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export const Login = () => {
                   required
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Masukkan Username / Ners ID"
+                  placeholder="Masukkan Username"
                   className="w-full pl-10 pr-4 py-2.5 text-xs font-black text-slate-900 dark:text-white rounded-2xl neu-input placeholder:text-slate-400 placeholder:font-normal"
                 />
               </div>
@@ -171,7 +171,7 @@ export const Login = () => {
                   <span>Memvalidasi S.Kep...</span>
                 ) : (
                   <>
-                    <span>Buka Sistem NersCalc</span>
+                    <span>Login</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
@@ -185,7 +185,6 @@ export const Login = () => {
               &copy; Ari Suandi Putra &bull; NersCalc
             </p>
             <p className="text-[10px] text-slate-600 dark:text-slate-300 font-bold">
-              Kenyamanan mata terjamin &bull; 100% Offline Medical Grade
             </p>
           </div>
 

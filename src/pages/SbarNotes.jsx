@@ -15,7 +15,7 @@ const STORAGE_KEY = 'nerscalc_sbar_notes';
 const DEFAULT_NOTE = {
   id: '1',
   bed: 'Bed 04 - Ruang Melati',
-  patientName: 'Tn. Hendra (48 th)',
+  patientName: 'pak budi (48 th)',
   diagnosis: 'Post Laparatomi Akut Abdomen H+1',
   situation: 'Nyeri luka operasi VAS 4/10, urin via kateter 80cc/jam kuning jernih.',
   background: 'Riwayat appendisitis perforasi, operasi cito kemarin malam. Alergi: Tidak ada. Infus RL 20 TPM lancar di tangan kiri.',
