@@ -30,7 +30,7 @@ export const ThemeModal = () => {
         <ThemeSelector />
 
         <div className="mt-6 pt-4 border-t border-slate-300/60 dark:border-white/10 flex justify-between items-center text-[11px] font-bold text-slate-600 dark:text-slate-300">
-          <span>&copy; Ari Suandi Putra</span>
+          <span>&copy; Ari Suandi Putra (Developer)</span>
           <button
             onClick={closeThemeModal}
             className="px-4 py-2 rounded-xl text-xs font-black shadow-md text-white transition-transform active:scale-95"

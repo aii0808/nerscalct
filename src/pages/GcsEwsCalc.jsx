@@ -80,7 +80,7 @@ export const GcsEwsCalc = () => {
 GCS Total: ${totalGcs} (E${eyeScore}V${verbalScore}M${motorScore})
 Interpretasi: ${gcsCategory}
 Pupil: Kiri ${pupilLeft} / Kanan ${pupilRight}
-© Ari Suandi Putra & NersCalc S.Kep`;
+Aplikasi NersCalc • Developer: Ari Suandi Putra`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);

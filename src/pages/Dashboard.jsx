@@ -237,10 +237,7 @@ export const Dashboard = () => {
       {/* Copyright Footer */}
       <div className="pt-2 pb-4 text-center text-xs text-slate-600 dark:text-slate-300 border-t border-slate-300/60 dark:border-white/10 font-bold">
         <p className="text-slate-900 dark:text-white">
-          &copy; Ari Suandi Putra &bull; NersCalc
-        </p>
-        <p className="text-[11px] font-medium opacity-80 mt-0.5">
-          
+          &copy; Ari Suandi Putra &bull; Software Developer
         </p>
       </div>
 

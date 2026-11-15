@@ -70,9 +70,9 @@ export const InfusCalc = () => {
   const handleCopySummary = () => {
     let text = '';
     if (calcMode === 'calc-tpm') {
-      text = `[NersCalc TPM Infus]\nVolume: ${numVolume} mL\nDurasi: ${hours} Jam ${minutes > 0 ? minutes + ' Menit' : ''}\nFaktor Tetes: ${dropFactor} gtt/mL\nHasil: ${Math.round(calculatedTpm)} TPM (${calculatedTpm.toFixed(1)} gtt/mnt)\nKecepatan: ${calculatedMlPerHour.toFixed(1)} mL/jam (1 tetes tiap ${secondsPerDrop.toFixed(2)} detik)\n© Ari Suandi Putra & NersCalc S.Kep`;
+      text = `[NersCalc TPM Infus]\nVolume: ${numVolume} mL\nDurasi: ${hours} Jam ${minutes > 0 ? minutes + ' Menit' : ''}\nFaktor Tetes: ${dropFactor} gtt/mL\nHasil: ${Math.round(calculatedTpm)} TPM (${calculatedTpm.toFixed(1)} gtt/mnt)\nKecepatan: ${calculatedMlPerHour.toFixed(1)} mL/jam (1 tetes tiap ${secondsPerDrop.toFixed(2)} detik)\nAplikasi NersCalc • Developer: Ari Suandi Putra`;
     } else {
-      text = `[NersCalc Estimasi Infus Habis]\nSisa Volume: ${numRemainingVol} mL\nTPM Terpasang: ${numRunningTpm} TPM\nEstimasi Selesai: ${hoursLeft} Jam ${minsLeft} Menit lagi (Sekitar ${estimatedFinishTimeStr})\n© Ari Suandi Putra & NersCalc S.Kep`;
+      text = `[NersCalc Estimasi Infus Habis]\nSisa Volume: ${numRemainingVol} mL\nTPM Terpasang: ${numRunningTpm} TPM\nEstimasi Selesai: ${hoursLeft} Jam ${minsLeft} Menit lagi (Sekitar ${estimatedFinishTimeStr})\nAplikasi NersCalc • Developer: Ari Suandi Putra`;
     }
 
     navigator.clipboard.writeText(text);

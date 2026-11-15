@@ -76,7 +76,7 @@ Periode: ${numHours} Jam | BB: ${numBB} kg | Suhu: ${numTemp}°C
 📤 Total Output: ${Math.round(totalOutput)} mL (Urine: ${urineVol}mL, IWL: ${Math.round(totalIwl)}mL, Drain: ${drainGastric}mL)
 ⚖️ Balance Cairan Netto: ${netBalance >= 0 ? '+' : ''}${Math.round(netBalance)} mL
 Urine Output: ${urineRate.toFixed(2)} mL/kgBB/jam (${urineRate >= 0.5 ? 'Normal/Adekuat' : 'Oliguria - Perlu Evaluasi!'})
-© Ari Suandi Putra & NersCalc S.Kep`;
+Aplikasi NersCalc • Developer: Ari Suandi Putra`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);

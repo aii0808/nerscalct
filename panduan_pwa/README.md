@@ -1,5 +1,5 @@
 # 📱 Panduan Pemasangan NersCalc PWA (Progressive Web App)
-**Hak Cipta: Ari Suandi Putra &bull; NersCalc Professional S.Kep**
+**Developer: Ari Suandi Putra &bull; NersCalc System**
 
 Link Resmi Aplikasi NersCalc (Live):
 🔗 **https://aii0808.github.io/nerscalct/**

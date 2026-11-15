@@ -130,7 +130,7 @@ ${activeNote.assessment || '-'}
 🔹 RECOMMENDATION (R):
 ${activeNote.recommendation || '-'}
 
-⏰ Dicatat: Jam ${activeNote.updatedAt} WIB via NersCalc (S.Kep System - © Ari Suandi Putra)`;
+⏰ Dicatat: Jam ${activeNote.updatedAt} WIB via NersCalc (Developer: Ari Suandi Putra)`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -339,7 +339,7 @@ ${activeNote.recommendation || '-'}
         {/* Footer info & delete button */}
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 border-t border-slate-300/60 dark:border-white/10 text-xs">
           <span className="text-slate-600 dark:text-slate-300 text-[11px] font-bold">
-            Otomatis tersimpan &bull; Terakhir diubah {activeNote.updatedAt} WIB &bull; &copy; Ari Suandi Putra
+            Otomatis tersimpan &bull; Terakhir diubah {activeNote.updatedAt} WIB &bull; &copy; Ari Suandi Putra (Developer)
           </span>
 
           <button

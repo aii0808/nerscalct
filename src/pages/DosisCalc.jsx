@@ -91,11 +91,11 @@ export const DosisCalc = () => {
   const copyResult = () => {
     let text = '';
     if (activeTab === 'syringe') {
-      text = `[NersCalc Syringe Pump]\nTarget Dosis: ${numDoseMcg} mcg/kgBB/menit (BB: ${numBB} kg)\nSediaan: ${numTotalDrugMg} mg dalam ${numSyringeVol} mL (Konsentrasi: ${concentrationMcgPerMl} mcg/mL)\nKecepatan Syringe Pump: ${syringePumpRate.toFixed(2)} mL/jam (cc/jam)\n© Ari Suandi Putra & NersCalc S.Kep`;
+      text = `[NersCalc Syringe Pump]\nTarget Dosis: ${numDoseMcg} mcg/kgBB/menit (BB: ${numBB} kg)\nSediaan: ${numTotalDrugMg} mg dalam ${numSyringeVol} mL (Konsentrasi: ${concentrationMcgPerMl} mcg/mL)\nKecepatan Syringe Pump: ${syringePumpRate.toFixed(2)} mL/jam (cc/jam)\nAplikasi NersCalc • Developer: Ari Suandi Putra`;
     } else if (activeTab === 'vial') {
-      text = `[NersCalc Oplos Sediaan Vial/Ampul]\nDosis Order: ${numOrderDose} ${drugUnit}\nSediaan Vial: ${numVialDose} ${drugUnit} dalam ${numSolvent} mL pelarut\nVolume yang Disedot: ${volumeToDraw.toFixed(2)} mL\n© Ari Suandi Putra & NersCalc S.Kep`;
+      text = `[NersCalc Oplos Sediaan Vial/Ampul]\nDosis Order: ${numOrderDose} ${drugUnit}\nSediaan Vial: ${numVialDose} ${drugUnit} dalam ${numSolvent} mL pelarut\nVolume yang Disedot: ${volumeToDraw.toFixed(2)} mL\nAplikasi NersCalc • Developer: Ari Suandi Putra`;
     } else {
-      text = `[NersCalc Dosis Pediatrik]\nBB Anak: ${numPediaBB} kg (Dosis: ${numPediaDose} mg/kgBB)\nDosis Per Kali: ${singleDoseMg.toFixed(1)} mg (${syrupMlPerDose.toFixed(1)} mL sirup)\nFrekuensi: ${pediaFreq}x sehari (Total: ${dailyDoseMg.toFixed(1)} mg/hari)\n© Ari Suandi Putra & NersCalc S.Kep`;
+      text = `[NersCalc Dosis Pediatrik]\nBB Anak: ${numPediaBB} kg (Dosis: ${numPediaDose} mg/kgBB)\nDosis Per Kali: ${singleDoseMg.toFixed(1)} mg (${syrupMlPerDose.toFixed(1)} mL sirup)\nFrekuensi: ${pediaFreq}x sehari (Total: ${dailyDoseMg.toFixed(1)} mg/hari)\nAplikasi NersCalc • Developer: Ari Suandi Putra`;
     }
 
     navigator.clipboard.writeText(text);

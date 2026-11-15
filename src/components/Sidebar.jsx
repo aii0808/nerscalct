@@ -186,7 +186,7 @@ export const Sidebar = () => {
         {!collapsed && (
           <div className="pt-2 text-[10px] text-center text-slate-600 dark:text-slate-300 leading-tight">
             <p className="font-black text-slate-900 dark:text-white">&copy; Ari Suandi Putra</p>
-            <p className="text-[9px] opacity-80">NersCalc Professional S.Kep</p>
+            <p className="text-[9px] opacity-80 font-bold text-slate-500 dark:text-slate-400">Software Developer</p>
           </div>
         )}
       </div>

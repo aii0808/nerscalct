@@ -70,4 +70,4 @@ npm run build
 ```
 
 ---
-&copy; Ari Suandi Putra &bull; NersCalc Professional S.Kep
+&copy; Ari Suandi Putra (Developer) &bull; NersCalc System

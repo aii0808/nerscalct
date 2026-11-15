@@ -183,9 +183,10 @@ export const Login = () => {
           {/* Copyright Ari Suandi Putra */}
           <div className="mt-5 pt-3.5 border-t border-slate-300/60 dark:border-white/10 text-center space-y-1">
             <p className="text-[11px] font-black text-slate-900 dark:text-white">
-              &copy; Ari Suandi Putra &bull; NersCalc
+              &copy; Ari Suandi Putra &bull; Developer
             </p>
-            <p className="text-[10px] text-slate-600 dark:text-slate-300 font-bold">
+            <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold">
+              NersCalc Clinical System
             </p>
           </div>
 
