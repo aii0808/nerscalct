@@ -259,7 +259,7 @@ export const SplashScreen = ({ onFinish }) => {
 
       {/* Footer Copyright */}
       <div className="text-center font-mono text-[11px] text-slate-500 font-bold">
-        &copy; Ari Suandi Putra &bull; NersCalc Professional S.Kep
+        &copy; Ari Suandi Putra &bull; NersCalc
       </div>
     </div>
   );
