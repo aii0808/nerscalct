@@ -5,11 +5,11 @@ const AuthContext = createContext(null);
 
 const STORAGE_KEY = 'nerscalc_auth_session';
 
-// Configuration strictly loaded via environment variables (.env) for complete privacy and zero hardcoded secrets
-const NURSE_USER = (import.meta.env.VITE_NURSE_USERNAME || '').toLowerCase();
-const NURSE_PASS = import.meta.env.VITE_NURSE_PASSWORD || '';
-const ADMIN_USER = (import.meta.env.VITE_ADMIN_USERNAME || '').toLowerCase();
-const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASSWORD || '';
+// Configuration loaded via environment variables (.env) or standard credentials
+const NURSE_USER = (import.meta.env.VITE_NURSE_USERNAME || 'lala').toLowerCase();
+const NURSE_PASS = import.meta.env.VITE_NURSE_PASSWORD || '12345678';
+const ADMIN_USER = (import.meta.env.VITE_ADMIN_USERNAME || 'admin').toLowerCase();
+const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASSWORD || 'admin123';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
