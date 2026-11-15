@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   NERSSYSTEM NEUMORPHIC DESIGN SYSTEM - MEDICAL GRADE (S.KEP EDITION)
+   ========================================================================== */
+
+:root {
+  --neu-bg: #E6ECF2;
+  --neu-card: #E6ECF2;
+  --neu-border: rgba(255, 255, 255, 0.85);
+  --neu-shadow-flat: 6px 6px 14px #cbd5e1, -6px -6px 14px #ffffff;
+  --neu-shadow-flat-sm: 3px 3px 8px #cbd5e1, -3px -3px 8px #ffffff;
+  --neu-shadow-flat-lg: 10px 10px 22px #cbd5e1, -10px -10px 22px #ffffff;
+  --neu-shadow-pressed: inset 3px 3px 6px #cbd5e1, inset -3px -3px 6px #ffffff;
+  --neu-shadow-pressed-sm: inset 2px 2px 4px #cbd5e1, inset -2px -2px 4px #ffffff;
+}
+
+html.dark, body.dark, .dark {
+  --neu-bg: #0A0D12;
+  --neu-card: #13171D;
+  --neu-border: #1E2633;
+  --neu-shadow-flat: 0 4px 16px rgba(0, 0, 0, 0.65);
+  --neu-shadow-flat-sm: 0 2px 8px rgba(0, 0, 0, 0.55);
+  --neu-shadow-flat-lg: 0 8px 24px rgba(0, 0, 0, 0.75);
+  --neu-shadow-pressed: inset 1px 2px 5px rgba(0, 0, 0, 0.85);
+  --neu-shadow-pressed-sm: inset 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--neu-bg);
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', 'Nunito', sans-serif;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  html.dark body, body.dark {
+    background-color: #0A0D12;
+    color: #F8FAFC;
+  }
+}
+
+/* ==========================================================================
+   AUTHENTIC 3D EMBOSS NEUMORPHISM (LIGHT MODE)
+   ========================================================================== */
+.neu-card {
+  background-color: #E6ECF2;
+  box-shadow: 6px 6px 14px #cbd5e1, -6px -6px 14px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #0F172A;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-card-sm {
+  background-color: #E6ECF2;
+  box-shadow: 3px 3px 8px #cbd5e1, -3px -3px 8px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #0F172A;
+}
+
+.neu-btn {
+  background-color: #E6ECF2;
+  box-shadow: 3px 3px 8px #cbd5e1, -3px -3px 8px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #1E293B;
+  transition: all 0.15s ease-in-out;
+}
+
+.neu-btn:hover {
+  box-shadow: 5px 5px 12px #cbd5e1, -5px -5px 12px #ffffff;
+  transform: translateY(-1px);
+}
+
+.neu-btn:active, .neu-btn-active {
+  box-shadow: inset 2px 2px 4px #cbd5e1, inset -2px -2px 4px #ffffff;
+  transform: translateY(0);
+}
+
+.neu-input {
+  background-color: #E6ECF2;
+  box-shadow: inset 2px 2px 4px #cbd5e1, inset -2px -2px 4px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #0F172A;
+  transition: all 0.15s ease;
+}
+
+.neu-input:focus {
+  box-shadow: inset 2px 2px 5px #cbd5e1, inset -2px -2px 5px #ffffff;
+  border-color: #10B981;
+  outline: none;
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES: ABSOLUTELY ZERO WHITE GLOW, ZERO WHITE HALO!
+   Only activated when parent has class .dark or html.dark / body.dark
+   ========================================================================== */
+html.dark .neu-card,
+body.dark .neu-card,
+.dark .neu-card {
+  background-color: #13171D !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.65) !important;
+  border: 1px solid #1E2633 !important;
+  color: #F8FAFC !important;
+}
+
+html.dark .neu-card-sm,
+body.dark .neu-card-sm,
+.dark .neu-card-sm {
+  background-color: #13171D !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid #1E2633 !important;
+  color: #F8FAFC !important;
+}
+
+html.dark .neu-btn,
+body.dark .neu-btn,
+.dark .neu-btn {
+  background-color: #171D25 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid #232C3B !important;
+  color: #F1F5F9 !important;
+}
+
+html.dark .neu-btn:hover,
+body.dark .neu-btn:hover,
+.dark .neu-btn:hover {
+  background-color: #1F2732 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65) !important;
+  border-color: #2F3C4E !important;
+}
+
+html.dark .neu-btn:active,
+html.dark .neu-btn-active,
+body.dark .neu-btn:active,
+body.dark .neu-btn-active,
+.dark .neu-btn:active,
+.dark .neu-btn-active {
+  background-color: #0F1318 !important;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.85) !important;
+  border-color: #171E28 !important;
+}
+
+html.dark .neu-input,
+body.dark .neu-input,
+.dark .neu-input {
+  background-color: #0A0D11 !important;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.85) !important;
+  border: 1px solid #1E2633 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .neu-input:focus,
+body.dark .neu-input:focus,
+.dark .neu-input:focus {
+  border-color: #10B981 !important;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.95), 0 0 0 1px #10B981 !important;
+}
+
+html.dark .shadow-neu-pressed,
+body.dark .shadow-neu-pressed,
+.dark .shadow-neu-pressed {
+  background-color: #0A0D11 !important;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.85) !important;
+  border-color: #1E2633 !important;
+}
+
+html.dark .shadow-neu-pressed-sm,
+body.dark .shadow-neu-pressed-sm,
+.dark .shadow-neu-pressed-sm {
+  background-color: #0A0D11 !important;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.75) !important;
+  border-color: #1E2633 !important;
+}
+
+html.dark .shadow-neu-flat,
+body.dark .shadow-neu-flat,
+.dark .shadow-neu-flat {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.65) !important;
+}
+
+html.dark .shadow-neu-flat-sm,
+body.dark .shadow-neu-flat-sm,
+.dark .shadow-neu-flat-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.55) !important;
+}
+
+html.dark .shadow-neu-flat-lg,
+body.dark .shadow-neu-flat-lg,
+.dark .shadow-neu-flat-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #A0AEC0;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2D3748;
+}

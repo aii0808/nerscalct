@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Pemasangan PWA NersCalc - S.Kep Edition</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Nunito', sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .page {
+      background: #FFFFFF;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+      margin-bottom: 0;
+    }
+
+    /* Header styling */
+    .header-box {
+      background: linear-gradient(135deg, #0F766E 0%, #115E59 50%, #134E4A 100%);
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .brand-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-title span {
+      color: #5EEAD4;
+    }
+
+    .brand-badge {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .author-tag {
+      text-align: right;
+      font-size: 11px;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .author-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #A7F3D0;
+    }
+
+    /* Benefit Cards */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .benefit-card {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .benefit-icon {
+      width: 32px;
+      height: 32px;
+      background: #10B981;
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 8px;
+    }
+
+    .benefit-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #065F46;
+      margin-bottom: 2px;
+    }
+
+    .benefit-desc {
+      font-size: 10px;
+      color: #047857;
+      line-height: 1.3;
+    }
+
+    /* Section Styling */
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E2E8F0;
+    }
+
+    .platform-badge {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-ios {
+      background: linear-gradient(135deg, #0284C7, #0369A1);
+    }
+
+    .badge-android {
+      background: linear-gradient(135deg, #10B981, #059669);
+    }
+
+    .badge-desktop {
+      background: linear-gradient(135deg, #6366F1, #4F46E5);
+    }
+
+    .section-heading {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+
+    /* Step Rows */
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .step-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 14px;
+      position: relative;
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .step-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #0F766E;
+      color: white;
+      font-weight: 800;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1E293B;
+    }
+
+    .step-desc {
+      font-size: 11.5px;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    /* Visual Mockups */
+    .mockup-box {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .icon-symbol {
+      width: 28px;
+      height: 28px;
+      background: #E2E8F0;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #0F172A;
+    }
+
+    .mockup-text {
+      font-size: 11px;
+      font-weight: 700;
+      color: #1E293B;
+    }
+
+    .mockup-subtext {
+      font-size: 9.5px;
+      color: #64748B;
+    }
+
+    /* Callout Note */
+    .callout-box {
+      background: #FEF3C7;
+      border-left: 4px solid #F59E0B;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #92400E;
+    }
+
+    .callout-box strong {
+      font-weight: 800;
+      color: #78350F;
+    }
+
+    /* Footer */
+    .footer-bar {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: #64748B;
+    }
+
+    .footer-bar strong {
+      color: #0F172A;
+      font-weight: 800;
+    }
+
+    /* Feature summary box on page 2 */
+    .feature-overview {
+      background: #F1F5F9;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
+    .feature-overview-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      font-size: 11px;
+      color: #334155;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .check-dot {
+      color: #10B981;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HALAMAN 1 ==================== -->
+  <div class="page">
+    
+    <!-- Top Brand Header -->
+    <div class="header-box">
+      <div>
+        <div class="brand-title">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M8 11h8"/>
+            <path d="M12 7v8"/>
+          </svg>
+          Ners<span>Calc</span>
+        </div>
+        <div class="brand-badge">S.Kep Clinical Grade &bull; Progressive Web App (PWA)</div>
+      </div>
+      <div class="author-tag">
+        <div>Pengembang & Konseptor:</div>
+        <div class="author-name">Ari Suandi Putra</div>
+        <div>Dokumentasi Resmi Pemasangan Link</div>
+      </div>
+    </div>
+
+    <!-- PWA Value Highlights -->
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="benefit-title">100% Gratis & Mandiri</div>
+        <div class="benefit-desc">Tanpa perlu login akun App Store atau Play Store</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div class="benefit-title">Bekerja 100% Offline</div>
+        <div class="benefit-desc">Kalkulator tetap aktif walau di ruang rawat tanpa sinyal</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <div class="benefit-title">Akses Instan 1-Ketuk</div>
+        <div class="benefit-desc">Ikon aplikasi langsung muncul di layar utama smartphone</div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div class="benefit-title">Layar Penuh (No Bar)</div>
+        <div class="benefit-desc">Tampilan aplikasi native bersih tanpa address bar browser</div>
+      </div>
+    </div>
+
+    <!-- ==================== PLATFORM 1: APPLE iOS ==================== -->
+    <div class="section-title-wrap">
+      <div class="platform-badge badge-ios">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.87-.9.04-1.99.6-2.64 1.36-.57.65-1.06 1.72-.93 2.75 1 .08 2.02-.49 2.64-1.24z"/>
+        </svg>
+        Apple iOS (iPhone & iPad)
+      </div>
+      <div class="section-heading">Pemasangan di Layar Utama via Safari</div>
+    </div>
+
+    <div class="step-grid">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">1</div>
+          <div class="step-title">Buka Link di Browser Safari</div>
+        </div>
+        <div class="step-desc">
+          Buka peramban resmi <strong>Safari</strong> di iPhone/iPad Anda, lalu akses link URL NersCalc yang telah diberikan.
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #0284C7; background: #E0F2FE;">🧭</div>
+          <div>
+            <div class="mockup-text">Gunakan Safari (Bukan Chrome iOS)</div>
+            <div class="mockup-subtext">Fitur PWA iOS hanya didukung penuh via Safari</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <div class="step-title">Tekan Tombol "Bagikan" (Share)</div>
+        </div>
+        <div class="step-desc">
+          Perhatikan bilah bawah peramban Safari. Ketuk tombol <strong>Share</strong> (ikon persegi dengan tanda panah mengarah ke atas).
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #0284C7; background: #E0F2FE;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          </div>
+          <div>
+            <div class="mockup-text">Ikon Share Lembar Bawah</div>
+            <div class="mockup-subtext">Posisinya berada di tengah bawah layar iPhone</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">3</div>
+          <div class="step-title">Pilih "Tambahkan ke Layar Utama"</div>
+        </div>
+        <div class="step-desc">
+          Gulir ke bawah pada lembar pilihan share hingga menemukan menu <strong>"Tambahkan ke Layar Utama"</strong> (<em>Add to Home Screen</em>).
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #0284C7; background: #E0F2FE;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div>
+            <div class="mockup-text">Tambahkan ke Layar Utama (+)</div>
+            <div class="mockup-subtext">Ketuk baris ini untuk membuka dialog instal</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">4</div>
+          <div class="step-title">Konfirmasi & Klik "Tambah"</div>
+        </div>
+        <div class="step-desc">
+          Nama aplikasi <strong>NersCalc</strong> akan otomatis terisi. Ketuk tombol <strong>"Tambah"</strong> (<em>Add</em>) di pojok kanan atas.
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #059669; background: #D1FAE5;">✓</div>
+          <div>
+            <div class="mockup-text">Selesai! Ikon Muncul di Home Screen</div>
+            <div class="mockup-subtext">Buka aplikasi seperti layaknya app App Store</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-box">
+      <strong>Khusus Pengguna iOS:</strong> Jika membuka link melalui WhatsApp atau Telegram, pastikan membuka browser Safari sebenarnya dengan menekan tombol titik tiga lalu pilih <em>"Buka di Browser Eksternal / Open in Safari"</em>.
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="footer-bar">
+      <div>&copy; <strong>Ari Suandi Putra</strong> &bull; NersCalc Medical System</div>
+      <div>Halaman 1 dari 2 &bull; Panduan PWA iOS</div>
+    </div>
+
+  </div>
+
+  <!-- ==================== HALAMAN 2 ==================== -->
+  <div class="page">
+
+    <!-- ==================== PLATFORM 2: ANDROID ==================== -->
+    <div class="section-title-wrap">
+      <div class="platform-badge badge-android">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4111 13.8533 8.125 12 8.125s-3.5902.2861-5.1367.8247L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+        </svg>
+        Android Smartphone
+      </div>
+      <div class="section-heading">Pemasangan via Google Chrome (Samsung, Xiaomi, Oppo, Vivo, Poco, dll.)</div>
+    </div>
+
+    <div class="step-grid">
+      <!-- Android Step 1 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #059669;">1</div>
+          <div class="step-title">Buka Link di Google Chrome</div>
+        </div>
+        <div class="step-desc">
+          Buka tautan NersCalc di browser <strong>Google Chrome</strong> pada smartphone Android Anda.
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #059669; background: #D1FAE5;">🌐</div>
+          <div>
+            <div class="mockup-text">Banner Otomatis di Bawah Layar</div>
+            <div class="mockup-subtext">Sering kali muncul tombol "Pasang NersCalc"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android Step 2 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #059669;">2</div>
+          <div class="step-title">Metode Menu Titik Tiga (⋮)</div>
+        </div>
+        <div class="step-desc">
+          Jika banner pop-up tidak muncul otomatis, tekan ikon <strong>Menu Titik Tiga (⋮)</strong> di pojok kanan atas browser Chrome.
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #059669; background: #D1FAE5;">⋮</div>
+          <div>
+            <div class="mockup-text">Menu Opsi Google Chrome</div>
+            <div class="mockup-subtext">Pojok kanan atas di samping bilah URL</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android Step 3 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #059669;">3</div>
+          <div class="step-title">Pilih "Pasang Aplikasi"</div>
+        </div>
+        <div class="step-desc">
+          Pilih menu <strong>"Pasang aplikasi"</strong> atau <strong>"Tambahkan ke Layar Utama"</strong> (<em>Install app / Add to Home screen</em>).
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #059669; background: #D1FAE5;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div>
+            <div class="mockup-text">Menu "Pasang Aplikasi"</div>
+            <div class="mockup-subtext">Sistem Android akan menyiapkan paket PWA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android Step 4 -->
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #059669;">4</div>
+          <div class="step-title">Ketuk Tombol "Instal"</div>
+        </div>
+        <div class="step-desc">
+          Kotak dialog konfirmasi akan muncul. Ketuk <strong>"Instal"</strong>. Dalam beberapa detik, NersCalc telah terpasang di App Drawer dan Layar Utama!
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #059669; background: #D1FAE5;">✓</div>
+          <div>
+            <div class="mockup-text">Terpasang Sepenuhnya</div>
+            <div class="mockup-subtext">Bisa dibuka dari menu utama tanpa membuka Chrome lagi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PLATFORM 3: DESKTOP & LAPTOP ==================== -->
+    <div class="section-title-wrap" style="margin-top: 14px;">
+      <div class="platform-badge badge-desktop">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+        Windows PC / Laptop / macOS
+      </div>
+      <div class="section-heading">Pemasangan Desktop App (Chrome / Microsoft Edge)</div>
+    </div>
+
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #4F46E5;">1</div>
+          <div class="step-title">Klik Ikon Instal di Bilah Alamat (URL Bar)</div>
+        </div>
+        <div class="step-desc">
+          Saat link NersCalc dibuka di Google Chrome atau Microsoft Edge PC, perhatikan di <strong>ujung paling kanan bilah alamat (URL)</strong>. Terdapat ikon komputer kecil dengan panah ke bawah atau simbol (+).
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #4F46E5; background: #EEF2FF;">🖥️</div>
+          <div>
+            <div class="mockup-text">Ikon "Pasang / Install NersCalc"</div>
+            <div class="mockup-subtext">Tepat di samping ikon bookmark bintang di bar URL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num" style="background: #4F46E5;">2</div>
+          <div class="step-title">Klik "Instal" & Jalankan Sebagai App Mandiri</div>
+        </div>
+        <div class="step-desc">
+          Klik tombol <strong>"Instal"</strong>. NersCalc akan langsung terbuka dalam jendela desktop mandiri tanpa tab browser. Shortcut otomatis dibuat di Desktop & Start Menu.
+        </div>
+        <div class="mockup-box">
+          <div class="icon-symbol" style="color: #4F46E5; background: #EEF2FF;">🚀</div>
+          <div>
+            <div class="mockup-text">Jendela Bersih & Super Cepat</div>
+            <div class="mockup-subtext">Siap dipakai di meja perawat / posko jaga</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ringkasan Fitur NersCalc S.Kep -->
+    <div class="feature-overview">
+      <div class="feature-overview-title">
+        <svg width="18" height="18" fill="none" stroke="#0F766E" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Fitur Unggulan NersCalc Setelah Terpasang:
+      </div>
+      <div class="feature-list">
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>Kalkulator TPM Infus & Metronom:</strong> Hitung tetesan per menit dengan audio ketukan sinkron.</span></div>
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>Kalkulator Dosis & Oplos Obat:</strong> Syringe pump (mcg/kgBB/m), vial/ampul, dan dosis anak.</span></div>
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>Balance Cairan 24 Jam & IWL:</strong> Koreksi demam otomatis & verifikasi perfusi ginjal.</span></div>
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>Skoring GCS & SBAR:</strong> Pengkajian kesadaran pupil & format serah terima pasien 1-klik.</span></div>
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>SOP Darurat "Jangan Panik!":</strong> Protokol cepat Code Blue, Anafilaktik, Hipoglikemia, dll.</span></div>
+        <div class="feature-item"><span class="check-dot">✓</span><span><strong>Pengingat Sholat & Makan Otomatis:</strong> Toast lembut jadwal Zuhur, Ashar, Maghrib, Isya.</span></div>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="footer-bar">
+      <div>&copy; <strong>Ari Suandi Putra</strong> &bull; NersCalc Professional S.Kep &bull; Hak Cipta Dilindungi</div>
+      <div>Halaman 2 dari 2 &bull; Android & Desktop Installation</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
