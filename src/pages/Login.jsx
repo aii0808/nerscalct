@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { User, Lock, Eye, EyeOff, ShieldCheck, AlertCircle, ArrowRight, Sun, Moon } from 'lucide-react';
+import { User, Lock, Eye, EyeOff, AlertCircle, ArrowRight, Sun, Moon, HeartPulse } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { useTheme } from '../context/ThemeContext';
 import { playTingSound } from '../utils/soundEffects';
+import NersLogo from '../components/NersLogo';
 
 export const Login = () => {
   const [username, setUsername] = useState('');
@@ -66,10 +67,10 @@ export const Login = () => {
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center p-3 rounded-3xl neu-card mb-3">
             <div
-              className="w-12 h-12 rounded-2xl text-white flex items-center justify-center shadow-md"
+              className="w-12 h-12 rounded-2xl text-white flex items-center justify-center shadow-md p-2"
               style={{ background: `linear-gradient(135deg, ${palette.primary}, ${palette.dark})` }}
             >
-              <ShieldCheck className="w-7 h-7" />
+              <NersLogo className="w-7 h-7" primaryColor="rgba(255, 255, 255, 0.95)" pulseColor={palette.primary} />
             </div>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">

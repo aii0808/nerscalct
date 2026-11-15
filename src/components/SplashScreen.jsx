@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Activity, ShieldCheck, HeartPulse, ArrowRight } from 'lucide-react';
+import { Activity, HeartPulse, ArrowRight } from 'lucide-react';
 import { playMonitorBeep } from '../utils/soundEffects';
 
 export const SplashScreen = ({ onFinish }) => {
@@ -206,7 +206,7 @@ export const SplashScreen = ({ onFinish }) => {
         {/* Brand Header */}
         <div className="text-center mb-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-[#00FF88] text-xs font-black mb-2 shadow-sm">
-            <ShieldCheck className="w-3.5 h-3.5" />
+            <HeartPulse className="w-3.5 h-3.5" />
             <span>SISTEM KLINIS </span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight flex items-center justify-center gap-2 font-sans">

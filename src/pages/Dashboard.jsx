@@ -7,17 +7,16 @@ import {
   ClipboardList,
   Sparkles,
   Clock,
-  Bell,
   Heart,
   ChevronRight,
-  ShieldCheck,
+  HeartPulse,
   Scale,
   GraduationCap,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import { useTheme } from '../context/ThemeContext';
-import { getTimeGreeting, getDailyQuote, SCHEDULED_REMINDERS } from '../utils/nurseSchedule';
+import { getTimeGreeting, getDailyQuote } from '../utils/nurseSchedule';
 import { getDailyNurseSweetWord } from '../utils/nurseGombalan';
 
 export const Dashboard = () => {
@@ -76,7 +75,7 @@ export const Dashboard = () => {
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-sm font-black text-slate-900 dark:text-white">{user?.name || 'Perawat Lala'}</span>
-                <ShieldCheck className="w-4 h-4" style={{ color: palette.primary }} />
+                <HeartPulse className="w-4 h-4" style={{ color: palette.primary }} />
               </div>
               <p className="text-xs font-black" style={{ color: palette.primary }}>S.Kep</p>
               <p className="text-[11px] text-slate-600 dark:text-slate-300 font-bold mt-0.5">{user?.unit || ''}</p>
@@ -232,51 +231,6 @@ export const Dashboard = () => {
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* Reminders List Section */}
-      <div className="neu-card rounded-3xl p-6">
-        <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-300/60 dark:border-white/10">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 shadow-neu-pressed-sm dark:shadow-neu-dark-pressed-sm">
-              <Bell className="w-4 h-4" />
-            </div>
-            <div>
-              <h3 className="text-sm font-black text-slate-900 dark:text-white">
-                Jadwal Pengingat Sholat & Nutrisi (WIB)
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
-                Pop-up santun otomatis saat memasuki waktu ibadah & makan siang
-              </p>
-            </div>
-          </div>
-          <span className="text-[10px] font-black text-emerald-700 bg-emerald-100 dark:bg-emerald-950/60 dark:text-emerald-300 px-3 py-1 rounded-full shadow-sm hidden sm:inline">
-            Realtime Aktif
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {SCHEDULED_REMINDERS.map((item) => (
-            <div
-              key={item.id}
-              className="p-3.5 rounded-2xl neu-card-sm flex items-start justify-between gap-3"
-            >
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="px-2 py-0.5 rounded-lg bg-white/80 dark:bg-black/40 font-mono font-black text-[11px] text-slate-900 dark:text-white border border-slate-200/50 dark:border-white/5">
-                    {item.badge}
-                  </span>
-                  <h4 className="text-xs font-black text-slate-900 dark:text-white">
-                    {item.title}
-                  </h4>
-                </div>
-                <p className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                  {item.message}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 

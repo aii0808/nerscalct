@@ -9,7 +9,6 @@ import {
   Scale,
   GraduationCap,
   LogOut,
-  ShieldCheck,
   Volume2,
   VolumeX,
   Palette,
@@ -17,6 +16,7 @@ import {
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import BurgerButton from './BurgerButton';
+import NersLogo from './NersLogo';
 import { isSoundMuted, setSoundMuted } from '../utils/soundEffects';
 
 export const Sidebar = () => {
@@ -53,10 +53,10 @@ export const Sidebar = () => {
           {!collapsed && (
             <div className="flex items-center gap-2.5">
               <div
-                className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-md"
+                className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-md p-1.5"
                 style={{ background: `linear-gradient(135deg, ${palette.primary}, ${palette.dark})` }}
               >
-                N
+                <NersLogo className="w-6 h-6" primaryColor="rgba(255, 255, 255, 0.95)" pulseColor={palette.primary} />
               </div>
               <div>
                 <h1 className="font-black text-base text-slate-900 dark:text-white tracking-tight leading-none">
@@ -71,10 +71,10 @@ export const Sidebar = () => {
 
           {collapsed && (
             <div
-              className="mx-auto w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-md"
+              className="mx-auto w-10 h-10 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-md p-1.5"
               style={{ background: `linear-gradient(135deg, ${palette.primary}, ${palette.dark})` }}
             >
-              N
+              <NersLogo className="w-6 h-6" primaryColor="rgba(255, 255, 255, 0.95)" pulseColor={palette.primary} />
             </div>
           )}
 
@@ -163,7 +163,7 @@ export const Sidebar = () => {
                 {user?.name || 'Perawat Lala'}
               </p>
               <div className="flex items-center gap-1 text-[10px] font-black" style={{ color: palette.primary }}>
-                <ShieldCheck className="w-3 h-3" />
+                <HeartPulse className="w-3 h-3" />
                 <span>S.Kep Ruangan</span>
               </div>
             </div>
