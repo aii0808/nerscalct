@@ -1,6 +1,9 @@
 # 📱 Panduan Pemasangan NersCalc PWA (Progressive Web App)
 **Hak Cipta: Ari Suandi Putra &bull; NersCalc Professional S.Kep**
 
+Link Resmi Aplikasi NersCalc (Live):
+🔗 **https://aii0808.github.io/nerscalct/**
+
 Folder ini berisi panduan lengkap pemasangan aplikasi NersCalc melalui link / URL agar dapat dipasang langsung di layar utama smartphone dan komputer desktop.
 
 ---
